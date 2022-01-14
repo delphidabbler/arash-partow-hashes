@@ -22,7 +22,7 @@ uses
    GeneralHashFunctions;
 
 var
-  Key : String;
+  Key : AnsiString;
 
 begin
  Key := 'abcdefghijklmnopqrstuvwxyz1234567890';

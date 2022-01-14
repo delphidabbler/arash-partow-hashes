@@ -19,24 +19,24 @@ unit GeneralHashfunctions;
 interface
 
 
-type THashfunction = function(const key : String) : Cardinal;
+type THashfunction = function(const key : AnsiString) : Cardinal;
 
 
-function RSHash   (const Str : String) : Cardinal;
-function JSHash   (const Str : String) : Cardinal;
-function PJWHash  (const Str : String) : Cardinal;
-function ELFHash  (const Str : String) : Cardinal;
-function BKDRHash (const Str : String) : Cardinal;
-function SDBMHash (const Str : String) : Cardinal;
-function DJBHash  (const Str : String) : Cardinal;
-function DEKHash  (const Str : String) : Cardinal;
-function BPHash   (const Str : String) : Cardinal;
-function FNVHash  (const Str : String) : Cardinal;
-function APHash   (const Str : String) : Cardinal;
+function RSHash   (const Str : AnsiString) : Cardinal;
+function JSHash   (const Str : AnsiString) : Cardinal;
+function PJWHash  (const Str : AnsiString) : Cardinal;
+function ELFHash  (const Str : AnsiString) : Cardinal;
+function BKDRHash (const Str : AnsiString) : Cardinal;
+function SDBMHash (const Str : AnsiString) : Cardinal;
+function DJBHash  (const Str : AnsiString) : Cardinal;
+function DEKHash  (const Str : AnsiString) : Cardinal;
+function BPHash   (const Str : AnsiString) : Cardinal;
+function FNVHash  (const Str : AnsiString) : Cardinal;
+function APHash   (const Str : AnsiString) : Cardinal;
 
 implementation
 
-function RSHash(const Str : String) : Cardinal;
+function RSHash(const Str : AnsiString) : Cardinal;
 const b = 378551;
 var
   a : Cardinal;
@@ -53,7 +53,7 @@ end;
 (* End Of RS Hash function *)
 
 
-function JSHash(const Str : String) : Cardinal;
+function JSHash(const Str : AnsiString) : Cardinal;
 var
   i : Integer;
 begin
@@ -66,7 +66,7 @@ end;
 (* End Of JS Hash function *)
 
 
-function PJWHash(const Str : String) : Cardinal;
+function PJWHash(const Str : AnsiString) : Cardinal;
 const BitsInCardinal = Sizeof(Cardinal) * 8;
 const ThreeQuarters  = (BitsInCardinal  * 3) div 4;
 const OneEighth      = BitsInCardinal div 8;
@@ -89,7 +89,7 @@ end;
 (* End Of P. J. Weinberger Hash function *)
 
 
-function ELFHash(const Str : String) : Cardinal;
+function ELFHash(const Str : AnsiString) : Cardinal;
 var
   i : Cardinal;
   x : Cardinal;
@@ -109,7 +109,7 @@ end;
 (* End Of ELF Hash function *)
 
 
-function BKDRHash(const Str : String) : Cardinal;
+function BKDRHash(const Str : AnsiString) : Cardinal;
 const Seed = 131; (* 31 131 1313 13131 131313 etc... *)
 var
   i : Cardinal;
@@ -123,7 +123,7 @@ end;
 (* End Of BKDR Hash function *)
 
 
-function SDBMHash(const Str : String) : Cardinal;
+function SDBMHash(const Str : AnsiString) : Cardinal;
 var
   i : Cardinal;
 begin
@@ -136,7 +136,7 @@ end;
 (* End Of SDBM Hash function *)
 
 
-function DJBHash(const Str : String) : Cardinal;
+function DJBHash(const Str : AnsiString) : Cardinal;
 var
   i : Cardinal;
 begin
@@ -149,7 +149,7 @@ end;
 (* End Of DJB Hash function *)
 
 
-function DEKHash(const Str : String) : Cardinal;
+function DEKHash(const Str : AnsiString) : Cardinal;
 var
   i : Cardinal;
 begin
@@ -162,7 +162,7 @@ end;
 (* End Of DEK Hash function *)
 
 
-function BPHash(const Str : String) : Cardinal;
+function BPHash(const Str : AnsiString) : Cardinal;
 var
   i : Cardinal;
 begin
@@ -175,7 +175,7 @@ end;
 (* End Of BP Hash function *)
 
 
-function FNVHash(const Str : String) : Cardinal;
+function FNVHash(const Str : AnsiString) : Cardinal;
 const FNVPrime = $811C9DC5;
 var
   i : Cardinal;
@@ -190,7 +190,7 @@ end;
 (* End Of FNV Hash function *)
 
 
-function APHash(const Str : String) : Cardinal;
+function APHash(const Str : AnsiString) : Cardinal;
 var
   i : Cardinal;
 begin
