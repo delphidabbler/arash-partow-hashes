@@ -4,6 +4,7 @@
 
 * Modified all `string` types to `AnsiString` to make that type explicit (since `string` type changed from `AnsiString` to `UnicodeString` at Delphi 2009).
 * Modified `LICENSE.md` to include new contributor.
+* Added Delphi XE compatible project file.
 
 ## v1.0.0 - 2022-01-14
 
